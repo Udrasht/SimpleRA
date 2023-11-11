@@ -21,6 +21,7 @@ make
 Post compilation, an executable names ```server``` will be created in the ```src``` directory
 ```
 ./server
+```
 
 
 
