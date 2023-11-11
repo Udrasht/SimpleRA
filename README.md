@@ -70,4 +70,3 @@ CHECKSYMMETRY command check the given matrix <matrix_name> is symmetric or not.
 COMPUTE command ccompute A - A_Result(A<sup>T</sup>) of matrix and store the result into A_Result matrix.
 
 ---
-//*This software was written by [@udrashtpal](https://github.com/Udrasht) ,[@dishantsharma](https://github.com/Dishant-sharmaIIITH) and [@VivekKirpan](https://github.com///VivekKirpan) as part of the Data Systems, Monsoon 2023 course at IIIT Hyderabad, instructed by Professor Kamal Karpalem. It is meant to be a learning aid, and is not //production-ready.*
