@@ -26,8 +26,16 @@ Post compilation, an executable names ```server``` will be created in the ```src
 
 
 ## Commands / Queries
-
+### Table Commands
 - Look at the [Overview.html](./docs/Overview.md) to understand the syntax and working of the table related queries.
+- Look at the [Report](./docs/Report(Phase 2).md) to understand logic and Working of below mention command.
+- ```SORT <table_name> BY <column_name1, column_name2,..., column_namek> IN <ASC|DESC, ASC|DESC,..., ASC|DESC>```
+Two-Phase Merge Sort algorithm is used to implement sort command.
+- ```<new_relation_name> <- JOIN <tablename1>, <tablename2> ON <column1> <bin_op> <column2>```
+- ```<new_table> <- ORDER BY <attribute> ASC|DESC ON <table_name>```
+- ```<new_table> <- GROUP BY <grouping_attribute> FROM <table_name> HAVING <aggregate(attribute)> <bin_op><attribute_value> RETURN <aggregate_func(attribute)>```
+  
+  
 ### Matrix Commands
 - Look at the [Report](./docs/Report.md) to understand the syntax, Working, Logic for Matrix related queries.
 - ```LOAD MATRIX <matrix_name>```:
