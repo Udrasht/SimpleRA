@@ -30,32 +30,44 @@ Post compilation, an executable names ```server``` will be created in the ```src
 - Look at the [Overview.html](./docs/Overview.md) to understand the syntax and working of the table related queries.
 - Look at the [Report](./docs/Report(Phase2).md) to understand logic and working of below mention commands.
 - ```SORT <table_name> BY <column_name1, column_name2,..., column_namek> IN <ASC|DESC, ASC|DESC,..., ASC|DESC>```
-Two-Phase Merge Sort algorithm is used to implement sort command.
 - ```<new_relation_name> <- JOIN <tablename1>, <tablename2> ON <column1> <bin_op> <column2>```
 - ```<new_table> <- ORDER BY <attribute> ASC|DESC ON <table_name>```
 - ```<new_table> <- GROUP BY <grouping_attribute> FROM <table_name> HAVING <aggregate(attribute)> <bin_op><attribute_value> RETURN <aggregate_func(attribute)>```
   
   
 ### Matrix Commands
-- Look at the [Report](./docs/Report.md) to understand the syntax, Working, Logic for Matrix related queries.
-- ```LOAD MATRIX <matrix_name>```:
+- Look at the [Report](./docs/Report.md) to understand the syntax, working and Logic for Matrix related queries.
+- ```LOAD MATRIX <matrix_name>```
+  
 The LOAD MATRIX command loads contents of the .csv (stored in ```data``` folder) and stores it as blocks in the ```data/temp``` directory.
 
-- ```PRINT MATRIX <matrix_name>```:
+- ```PRINT MATRIX <matrix_name>```
+  
 PRINT MATRIX command prints the first 20 rows of the matrix on the terminal.
 
-- ```TRANSPOSE <matrix_name>```:
+
+- ```TRANSPOSE <matrix_name>```
+  
 TRANSPOSE command transposes the matrix IN PLACE (without using any additional disk blocks) and writes it back into the same blocks the matrix was stored in.
 
-- ```EXPORT MATRIX <matrix_name>```:
-EXPORT command writes the contents of the matrix named
-<matrix_name> into a file called <matrix_name>.csv in ```data``` folder.
 
-- ```RENAME MATRIX <matrix_name> <new_matrix_name>```:
+- ```EXPORT MATRIX <matrix_name>```
+  
+EXPORT command writes the contents of the matrix named <matrix_name> into a file called <matrix_name>.csv in ```data``` folder.
+
+
+- ```RENAME MATRIX <matrix_name> <new_matrix_name>```
+  
 RENAME command change the name of matrix <matrix_name> to <new_matrix_name>.
 
-- ```CHECKSYMMETRY < matrix_name >```:
+
+- ```CHECKSYMMETRY < matrix_name >```
 CHECKSYMMETRY command check the given matrix <matrix_name> is symmetric or not.
 
-- ```COMPUTE < matrix_name >```:
+
+- ```COMPUTE < matrix_name >```
+
 COMPUTE command ccompute A - A_Result(A<sup>T</sup>) of matrix and store the result into A_Result matrix.
+
+---
+*This software was written by [@udrashtpal](https://github.com/Udrasht) ,[@dishantsharma](https://github.com/Dishant-sharmaIIITH) and [@VivekKirpan](https://github.com/VivekKirpan) as part of the Data Systems, Monsoon 2023 course at IIIT Hyderabad, instructed by Professor Kamal Karpalem. It is meant to be a learning aid, and is not production-ready.*
