@@ -1,0 +1,10 @@
+LOAD Student
+LOAD Marks
+Sud_Adv_cross_d <- CROSS Student Marks
+temp_d <- SELECT Student_Stud_Id == Marks_Stud_Id FROM Sud_Adv_cross_d
+temp_math <- SELECT Maths_marks >= 70 FROM temp_d
+temp_math_phy <- SELECT Physics_marks > 60 FROM temp_math
+temp_math_phy_age <- SELECT Stud_age >= 16 FROM temp_math_phy
+temp_math_phy_age_age <- SELECT Stud_age <= 18 FROM temp_math_phy_age
+ress_d <- PROJECT Student_Stud_Id, Maths_marks, Physics_marks, Stud_age FROM temp_math_phy_age_age
+PRINT ress_d
