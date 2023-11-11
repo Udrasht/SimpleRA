@@ -1,5 +1,5 @@
 # SimpleRA
-Data-Systems-Project || A simplified relational database management system with support for integer-only tables and matrices. Supports two-phase merge sort, buffer management and aggregate queries.
+Data-Systems-Project || A simplified relational database management system supporting only integer tables and matrices. Supports two-phase merge sort, buffer management and aggregate queries.
 ## Compilation Instructions
 We use ```make``` to compile all the files and creste the server executable. ```make``` is used primarily in Linux systems, so those of you who want to use Windows will probably have to look up alternatives (I hear there are ways to install ```make``` on Windows). To compile
 
